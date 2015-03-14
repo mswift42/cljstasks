@@ -5,16 +5,12 @@
               [goog.events :as events]
               [goog.history.EventType :as EventType]
               [cljsjs.react :as react]
-              [webapp.views.about-page :refer [about-page]])
+              [webapp.views.about-page :refer [about-page]]
+              [webapp.views.home-page :refer [home-page]])
     (:import goog.History))
 
 ;; -------------------------
 ;; Views
-
-(defn home-page []
-  [:div [:h2 "Welcome to webapp"]
-   [:div [:a {:href "#/about"} "go to about page"]]])
-
 
 
 (defn current-page []
