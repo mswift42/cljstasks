@@ -24,6 +24,7 @@
             [lein-cljsbuild "1.0.4"]
             [lein-environ "1.0.0"]
             [lein-ring "0.9.1"]
+            [cider/cider-nrepl "0.8.2"]
             [lein-asset-minifier "0.2.2"]]
 
   :ring {:handler webapp.handler/app
