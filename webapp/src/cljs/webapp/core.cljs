@@ -4,7 +4,8 @@
               [secretary.core :as secretary :include-macros true]
               [goog.events :as events]
               [goog.history.EventType :as EventType]
-              [cljsjs.react :as react])
+              [cljsjs.react :as react]
+              [webapp.views.about-page :refer [about-page]])
     (:import goog.History))
 
 ;; -------------------------
@@ -14,9 +15,7 @@
   [:div [:h2 "Welcome to webapp"]
    [:div [:a {:href "#/about"} "go to about page"]]])
 
-(defn about-page []
-  [:div#aboutheader [:h2 "DAYS - A simple Dayplanner implemented in ClojureScript / Reagent."]
-   [:div [:a {:href "#/"} "go to the home page"]]])
+
 
 (defn current-page []
   [:div [(session/get :current-page)]])
