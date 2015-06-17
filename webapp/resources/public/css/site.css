@@ -36,3 +36,10 @@ a:hover {
     width:80%;
     margin:auto;
 }
+.header > h2 {
+    text-align:center;
+}
+
+.aboutdesc > p {
+    text-align:center;
+}
