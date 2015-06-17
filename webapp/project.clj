@@ -8,9 +8,9 @@
 
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [cljsjs/react "0.12.2-5"]
-                 [reagent "0.5.0-alpha3"]
-                 [reagent-forms "0.4.3"]
-                 [reagent-utils "0.1.3"]
+                 [reagent "0.5.0"]
+                 [reagent-forms "0.5.1"]
+                 [reagent-utils "0.1.4"]
                  [secretary "1.2.1"]
                  [org.clojure/clojurescript "0.0-2913" :scope "provided"]
                  [ring "1.3.2"]
@@ -24,7 +24,6 @@
             [lein-cljsbuild "1.0.4"]
             [lein-environ "1.0.0"]
             [lein-ring "0.9.1"]
-            [cider/cider-nrepl "0.8.2"]
             [lein-asset-minifier "0.2.2"]]
 
   :ring {:handler webapp.handler/app
