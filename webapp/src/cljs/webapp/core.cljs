@@ -16,6 +16,7 @@
 (defn current-page []
   [:div [(session/get :current-page)]])
 
+
 ;; -------------------------
 ;; Routes
 (secretary/set-config! :prefix "#")

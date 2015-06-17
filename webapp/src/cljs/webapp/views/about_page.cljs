@@ -8,4 +8,4 @@
    [:div.header
     [:h2 "About Days"]]
    [:div.aboutdesc
-    [:p "A simple dayplanner implemented in clojurescirpt / reagent."]]])
+    [:p "A simple dayplanner implemented in clojurescrip"]]])
