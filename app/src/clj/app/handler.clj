@@ -15,7 +15,10 @@
      [:meta {:charset "utf-8"}]
      [:meta {:name "viewport"
              :content "width=device-width, initial-scale=1"}]
-     (include-css (if (env :dev) "css/site.css" "css/site.min.css"))]
+     (include-css (if (env :dev) "css/site.css" "css/site.min.css"))
+     (include-css "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css")
+     (include-css "https://fonts.googleapis.com/icon?family=Material+Icons")
+     (include-js "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js")]
     [:body
      [:div#app
       [:h3 "ClojureScript has not been compiled!"]
