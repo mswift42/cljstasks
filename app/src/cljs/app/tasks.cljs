@@ -10,5 +10,6 @@
   [:div.tasklist
    [:ul
     (for [i tasks]
+      ^{:key i}
       [:div.tasksummary
        [:h5 (:summary i)]])]])
