@@ -11,13 +11,13 @@
 ;; Views
 
 (defn home-page []
-  [:div [:h2 "Welcome to app"]
-   [:div [:a {:href "#/about"} "go to about page"]]]
+  [:div [:h2.header "Welcome to Days"]]
   [tasks/list-tasks])
 
 (defn about-page []
-  [:div [:h2 "About app"]
-   [:div [:a {:href "#/"} "go to the home page"]]])
+  [:div [:h2.header "About Days"]
+   [:div
+    [:p "A simple dayplanner implemented in reagent / react."]]])
 
 (defn current-page []
   [:div [(session/get :current-page)]])
