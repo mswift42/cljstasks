@@ -13,6 +13,8 @@
     [:h5 (:summary task)]]])
 
 (defn list-tasks
+  "list-tasks is a component container for a list
+   of single-tasks."
   []
   [:div.tasklist
    [:ul
