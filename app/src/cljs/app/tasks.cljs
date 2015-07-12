@@ -5,11 +5,17 @@
   [{:summary "task1"}
    {:summary "task2"}])
 
+(defn single-task
+  "single-task returns a html element for a given task"
+  [task]
+  [:div.singletask
+   [:div.tasksummary
+    [:h5 (:summary task)]]])
+
 (defn list-tasks
   []
   [:div.tasklist
    [:ul
     (for [i tasks]
       ^{:key i}
-      [:div.tasksummary
-       [:h5 (:summary i)]])]])
+      (single-task i))]])
