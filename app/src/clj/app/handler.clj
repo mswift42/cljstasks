@@ -20,11 +20,31 @@
      (include-css "https://fonts.googleapis.com/icon?family=Material+Icons")
      (include-js "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js")]
     [:body
-     [:div#app
-      [:h3 "ClojureScript has not been compiled!"]
-      [:p "please run "
-       [:b "lein figwheel"]
-       " in order to start the compiler"]]
+     [:div.navlayout
+      [:div.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
+       [:header.mdl-layout__header
+        [:div.mdl-layout__header-row
+         [:div.mdl-layout-spacer]
+         [:div.mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right
+          [:label.mdl-button.mdl-js-button.mdl-button--icon
+           {:for "fixed-header-drawer-exp"}
+           [:i.material-icons "search"]]
+          [:div.mdl-textfield__expendable-holder
+           [:input.mdl-textfield__input {:type "text" :name "searchinput"
+                                         :id "fixed-header-drawer-exp"}]]]]]
+          
+       [:div.mdl-layout__drawer
+        [:span.mdl-layout-title "Days"]
+        [:nav.mdl-navigation
+         [:a.mdl-navigation__link {:href "/#"} "Home"]
+         [:a.mdl-navigation__link {:href "/#about"} "About"]]]
+       [:main.mdl-layout__content
+        [:div.page-content
+         [:div#app
+          [:h3 "ClojureScript has not been compiled!"]
+          [:p "please run "
+           [:b "lein figwheel"]
+           " in order to start the compiler"]]]]]]
      (include-js "js/app.js")]]))
 
 (defroutes routes
