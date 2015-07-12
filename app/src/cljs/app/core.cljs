@@ -11,7 +11,6 @@
 ;; Views
 
 (defn home-page []
-  [:div [:h2.header "Welcome to Days"]]
   [tasks/list-tasks])
 
 (defn about-page []
