@@ -16,7 +16,7 @@
      [:meta {:name "viewport"
              :content "width=device-width, initial-scale=1"}]
      (include-css (if (env :dev) "css/site.css" "css/site.min.css"))
-     (include-css "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css")
+     (include-css "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.blue_grey-deep_purple.min.css")
      (include-css "https://fonts.googleapis.com/icon?family=Material+Icons")
      (include-js "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js")]
     [:body
