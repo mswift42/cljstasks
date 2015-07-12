@@ -3,7 +3,8 @@
               [reagent.session :as session]
               [secretary.core :as secretary :include-macros true]
               [goog.events :as events]
-              [goog.history.EventType :as EventType])
+              [goog.history.EventType :as EventType]
+              [app.tasks :as tasks])
     (:import goog.History))
 
 ;; -------------------------
@@ -11,7 +12,8 @@
 
 (defn home-page []
   [:div [:h2 "Welcome to app"]
-   [:div [:a {:href "#/about"} "go to about page"]]])
+   [:div [:a {:href "#/about"} "go to about page"]]]
+  [tasks/list-tasks])
 
 (defn about-page []
   [:div [:h2 "About app"]
