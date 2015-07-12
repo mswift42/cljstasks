@@ -32,19 +32,18 @@
           [:div.mdl-textfield__expendable-holder
            [:input.mdl-textfield__input {:type "text" :name "searchinput"
                                          :id "fixed-header-drawer-exp"}]]]]]
-          
+       
        [:div.mdl-layout__drawer
         [:span.mdl-layout-title "Days"]
         [:nav.mdl-navigation
          [:a.mdl-navigation__link {:href "/#"} "Home"]
          [:a.mdl-navigation__link {:href "/#about"} "About"]]]
        [:main.mdl-layout__content
-        [:div.page-content
-         [:div#app
-          [:h3 "ClojureScript has not been compiled!"]
-          [:p "please run "
-           [:b "lein figwheel"]
-           " in order to start the compiler"]]]]]]
+        [:div#app.page-content
+         [:h3 "ClojureScript has not been compiled!"]
+         [:p "please run "
+          [:b "lein figwheel"]
+          " in order to start the compiler"]]]]]
      (include-js "js/app.js")]]))
 
 (defroutes routes
