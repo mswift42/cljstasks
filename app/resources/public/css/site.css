@@ -1,6 +1,10 @@
 body {
 }
 
+.addtask {
+    margin:2vh;
+}
+
 .taskcard.mdl-card {
     margin-bottom:3vh;
 }
