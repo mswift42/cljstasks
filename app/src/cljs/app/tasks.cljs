@@ -2,8 +2,9 @@
   (:require [reagent.core :as reagent :refer [atom]]))
 
 (def tasks
-  [{:summary "task1"}
-   {:summary "task2"}])
+  (atom
+            [{:summary "task1"}
+             {:summary "task2"}]))
 
 (defn single-task
   "single-task returns a html element for a given task"
@@ -16,8 +17,15 @@
   "list-tasks is a component container for a list
    of single-tasks."
   []
+  [:div.addtask
+   [:button.mdl-button.mdl-js-button]]
   [:div.tasklist
    [:ul
-    (for [i tasks]
+    (for [i @tasks]
       ^{:key i}
       (single-task i))]])
+
+(defn add-task
+  "add a task to var tasks"
+  [task]
+  (swap! tasks conj task))
