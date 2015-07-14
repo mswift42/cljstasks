@@ -24,7 +24,7 @@
   []
   [:div.tasklist
    [:div.addtask
-   [:button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored {:on-click #(add-task {:summary ""})}
+   [:button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored {:on-click #(add-task {:summary "New Task"})}
     [:i.material-icons "add"]]]
    [:ul
     (for [i @tasks]
