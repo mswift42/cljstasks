@@ -11,12 +11,24 @@
   [task]
   (swap! tasks conj task))
 
+(defn card-element
+  "card-element returns a material-design card component."
+  []
+  [:div.mdl-card.mdl-shadow--2dp.taskcard
+   [:div.mdl-card__title.mdl-card--expand]])
+
 (defn single-task
   "single-task returns a html element for a given task"
   [task]
   [:div.mdl-card.mdl-shadow--2dp.taskcard
    [:div.mdl-card__title.mdl-card--expand
     [:h5 (:summary task)]]])
+
+(defn edit-task
+  "edit-task represents a single-task element with an 
+   text input field for correcting the task summary."
+  [task]
+  [])
 
 (defn list-tasks
   "list-tasks is a component container for a list
