@@ -29,7 +29,9 @@
   "edit-task represents a single-task element with an 
    text input field for correcting the task summary."
   [task]
-  [])
+  [:div
+   [card-element
+    [:input {:type "text" :value (:summary task)}]]])
 
 (defn list-tasks
   "list-tasks is a component container for a list
