@@ -13,15 +13,16 @@
 
 (defn card-element
   "card-element returns a material-design card component."
-  []
+  [content]
   [:div.mdl-card.mdl-shadow--2dp.taskcard
-   [:div.mdl-card__title.mdl-card--expand]])
+   [:div.mdl-card__title.mdl-card--expand
+    content]])
 
 (defn single-task
   "single-task returns a html element for a given task"
   [task]
-  [:div.mdl-card.mdl-shadow--2dp.taskcard
-   [:div.mdl-card__title.mdl-card--expand
+  [:div
+   [card-element
     [:h5 (:summary task)]]])
 
 (defn edit-task
