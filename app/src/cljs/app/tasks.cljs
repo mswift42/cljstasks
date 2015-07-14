@@ -3,8 +3,8 @@
 
 (def tasks
   (atom
-            [{:summary "task1"}
-             {:summary "task2"}]))
+            '({:summary "task1"}
+             {:summary "task2"})))
 
 (defn add-task
   "add a task to var tasks"
@@ -22,7 +22,6 @@
   "list-tasks is a component container for a list
    of single-tasks."
   []
-  
   [:div.tasklist
    [:div.addtask
    [:button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored {:on-click #(add-task {:summary ""})}
