@@ -18,20 +18,21 @@
    [:div.mdl-card__title.mdl-card--expand
     content]])
 
+(defn edit-task-summary
+  "edit-task represents a single-task element with an 
+   text input field for correcting the task summary."
+  [task]
+  [:div {:style "display:none"}
+   [:input {:type "text" :value (:summary task)}]])
+
 (defn single-task
   "single-task returns a html element for a given task"
   [task]
   [:div
    [card-element
-    [:h5 (:summary task)]]])
+    [:h5 (:summary task)]
+    [edit-task-summary task]]])
 
-(defn edit-task
-  "edit-task represents a single-task element with an 
-   text input field for correcting the task summary."
-  [task]
-  [:div
-   [card-element
-    [:input {:type "text" :value (:summary task)}]]])
 
 (defn list-tasks
   "list-tasks is a component container for a list
