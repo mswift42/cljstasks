@@ -1,7 +1,7 @@
 (ns app.tasks
   (:require [reagent.core :as reagent :refer [atom]]))
 
-(def tasks
+(defonce tasks
   (atom
             '({:summary "task1"}
              {:summary "task2"})))
