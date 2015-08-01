@@ -11,6 +11,13 @@
   [task]
   (swap! tasks conj task))
 
+(defn toggle-class
+  "swap classes for a referenced atom."
+  [a k class1 class2]
+  (if (= (@a k) class1)
+    (swap! a assoc k class2)
+    (swap! a assoc k class1)))
+
 (defn card-element
   "card-element returns a material-design card component."
   [content]
