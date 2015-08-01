@@ -9,3 +9,11 @@ body {
     margin-bottom:3vh;
 }
 
+.hideinput {
+    display:none;
+}
+
+.hidesummary {
+    display:none;
+}
+
