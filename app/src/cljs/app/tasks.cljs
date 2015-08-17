@@ -29,17 +29,17 @@
   "edit-task represents a single-task element with an 
    text input field for correcting the task summary."
   [task]
-  [:div {:style "display:none"}
-   [:input {:type "text" :value (:summary task)}]])
+  [:div {:style {:display "none"}}
+         [:input {:type "text" :value (:summary task)}]])
 
 (defn single-task
   "single-task returns a html element for a given task"
   [task]
   (let [editing (atom false)]
     [:div
-     [card-element {:on-double-click #(reset! editing true)}
-      (when @editing
-        [:h5 (:summary task )])]]))
+     [card-element 
+      [:h5 (:summary task )]
+      [edit-task-summary task]]]))
 
 
 (defn list-tasks
