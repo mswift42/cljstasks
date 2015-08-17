@@ -3,8 +3,8 @@
 
 (defonce tasks
   (atom
-            '({:summary "task1"}
-             {:summary "task2"})))
+   '({:summary "task1"}
+     {:summary "task2"})))
 
 (defn add-task
   "add a task to var tasks"
@@ -35,10 +35,11 @@
 (defn single-task
   "single-task returns a html element for a given task"
   [task]
-  [:div
-   [card-element
-    [:h5 (:summary task)]
-    [edit-task-summary task]]])
+  (let [editing (atom false)]
+    [:div
+     [card-element {:on-double-click #(reset! editing true)}
+      (when @editing
+        [:h5 (:summary task )])]]))
 
 
 (defn list-tasks
@@ -47,8 +48,8 @@
   []
   [:div.tasklist
    [:div.addtask
-   [:button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored {:on-click #(add-task {:summary "New Task"})}
-    [:i.material-icons "add"]]]
+    [:button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored {:on-click #(add-task {:summary "New Task"})}
+     [:i.material-icons "add"]]]
    [:ul
     (for [i @tasks]
       ^{:key i}
