@@ -12,6 +12,9 @@ body {
 .hideinput {
     display:none;
 }
+.showinput {
+    display:all;
+}
 
 .hidesummary {
     display:none;
